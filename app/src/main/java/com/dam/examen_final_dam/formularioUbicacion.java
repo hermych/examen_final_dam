@@ -19,7 +19,18 @@ public class formularioUbicacion extends AppCompatActivity {
         editTextTextPersonName3 = (EditText)findViewById(R.id.editTextTextPersonName3);
         editTextTextPersonName4 = (EditText)findViewById(R.id.editTextTextPersonName4);
         buttonUbicacion = findViewById(R.id.buttonUbicacion);
+<<<<<<< HEAD
     }
+=======
+        buttonUbicacion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent( formularioUbicacion.this, ubicacionFinal.class);
+                i.putExtra("longitud",editTextTextPersonName2.getText().toString());
+                i.putExtra("latitud",editTextTextPersonName3.getText());
+                i.putExtra("marcador",editTextTextPersonName4.getText());
+                startActivity(i);
+>>>>>>> 034840a79ba5f483d8854395a39f7a3d9976c8a4
 
     public void Enviar(View view){
         Intent  i = new Intent(this, ubicacionFinal.class);
