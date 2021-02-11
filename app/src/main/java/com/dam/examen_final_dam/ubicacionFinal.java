@@ -26,14 +26,12 @@ public class ubicacionFinal extends FragmentActivity implements OnMapReadyCallba
         mapFragment.getMapAsync(this);
     }
 
-
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-        String marcador = getIntent().getStringExtra("marcador");
-        double latitud = Double.parseDouble(getIntent().getStringExtra("longitud"));
-        double longitud = Double.parseDouble(getIntent().getStringExtra("latitud"));
-
+        String marcador = getIntent().getStringExtra("dato1");
+        double latitud = Double.parseDouble(getIntent().getStringExtra("dato2"));
+        double longitud = Double.parseDouble(getIntent().getStringExtra("dato3"));
 
         // Add a marker in Sydney and move the camera
         LatLng ubicacion = new LatLng(longitud,latitud);
